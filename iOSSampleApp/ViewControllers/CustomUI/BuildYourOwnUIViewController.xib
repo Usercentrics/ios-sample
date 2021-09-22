@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BuildYourOwnUIViewController" customModule="iOSSampleApp" customModuleProvider="target">
+            <connections>
+                <outlet property="currentLegalFrameworkLabel" destination="e3Y-wV-yaQ" id="cXq-0w-3CY"/>
+                <outlet property="view" destination="iN0-l3-epB" id="b1H-O4-oAF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jtN-zj-GOb">
+                    <rect key="frame" x="16" y="60" width="382" height="380.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Those options will print on Console some outputs needed for you to build a custom UI according to your target Legal Framework" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jlc-JX-wxh">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="57.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61w-GZ-HoR">
+                            <rect key="frame" x="0.0" y="65.5" width="382" height="20"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="mzm-FZ-AIG"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3Y-wV-yaQ">
+                            <rect key="frame" x="0.0" y="93.5" width="382" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Kb-f4-Rut">
+                            <rect key="frame" x="0.0" y="101.5" width="382" height="20"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="h9S-Hd-hxs"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Those buttons represents APIs that you need to call in order to replicate user actions to Usercentrics" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nh5-ol-w0s">
+                            <rect key="frame" x="0.0" y="129.5" width="382" height="61"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6g-3G-kFo">
+                            <rect key="frame" x="0.0" y="198.5" width="382" height="30"/>
+                            <state key="normal" title="Print UI Elements"/>
+                            <connections>
+                                <action selector="didTapPrintUiElements:" destination="-1" eventType="touchUpInside" id="HD0-11-A6Z"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSa-mg-VHN">
+                            <rect key="frame" x="0.0" y="236.5" width="382" height="30"/>
+                            <state key="normal" title="Accept All"/>
+                            <connections>
+                                <action selector="didTapAcceptAll:" destination="-1" eventType="touchUpInside" id="NCa-Tj-TMy"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pee-jp-oZ9">
+                            <rect key="frame" x="0.0" y="274.5" width="382" height="30"/>
+                            <state key="normal" title="Deny All"/>
+                            <connections>
+                                <action selector="didTapDenyAll:" destination="-1" eventType="touchUpInside" id="13S-4w-I7o"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cO9-cI-w0n">
+                            <rect key="frame" x="0.0" y="312.5" width="382" height="30"/>
+                            <state key="normal" title="Save Services"/>
+                            <connections>
+                                <action selector="didTapSaveServices:" destination="-1" eventType="touchUpInside" id="sRS-lI-eTT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdq-7q-7Ix">
+                            <rect key="frame" x="0.0" y="350.5" width="382" height="30"/>
+                            <state key="normal" title="Change Language"/>
+                            <connections>
+                                <action selector="didTapChangeLanguage:" destination="-1" eventType="touchUpInside" id="o00-i3-LNY"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Jlc-JX-wxh" firstAttribute="leading" secondItem="jtN-zj-GOb" secondAttribute="leading" id="AdL-nk-q9c"/>
+                        <constraint firstAttribute="trailing" secondItem="Jlc-JX-wxh" secondAttribute="trailing" id="DZc-KX-Uck"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="jtN-zj-GOb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="2f1-1P-6VT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jtN-zj-GOb" secondAttribute="trailing" constant="16" id="C8d-8F-ijQ"/>
+                <constraint firstItem="jtN-zj-GOb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Zas-KV-TMr"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="120.53571428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
