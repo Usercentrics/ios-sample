@@ -6,9 +6,7 @@ final class BuildYourOwnUIViewController: UIViewController {
 
     @IBOutlet weak var currentLegalFrameworkLabel: UILabel!
 
-    private lazy var activeVariant = { UsercentricsCore.shared.getCMPData().activeVariant }()
-    private lazy var isTCF = { activeVariant == UsercentricsVariant.tcf }()
-    private lazy var isCCPA = { activeVariant == UsercentricsVariant.ccpa }()
+    private var activeVariant: UsercentricsVariant { UsercentricsCore.shared.getCMPData().activeVariant }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -180,59 +178,47 @@ extension BuildYourOwnUIViewController {
     }
 
     private func printUiElements() {
-        if (isTCF) {
-            printTCFMethods()
-            return
+        switch activeVariant {
+            case .tcf:
+                printTCFMethods()
+            case .ccpa:
+                printCCPAMethods()
+            default:
+                printGDPRMethods()
         }
-
-        if (isCCPA) {
-            printCCPAMethods()
-            return
-        }
-
-        printGDPRMethods()
     }
 
     @IBAction func didTapAcceptAll(_ sender: Any) {
-        if (isTCF) {
-            acceptAllForTCF()
-            return
+        switch activeVariant {
+            case .tcf:
+                acceptAllForTCF()
+            case .ccpa:
+                acceptAllForCCPA()
+            default:
+                acceptAllForGDPR()
         }
-
-        if (isCCPA) {
-            acceptAllForCCPA()
-            return
-        }
-
-        acceptAllForGDPR()
     }
 
     @IBAction func didTapDenyAll(_ sender: Any) {
-        if (isTCF) {
-            denyAllForTCF()
-            return
+        switch activeVariant {
+            case .tcf:
+                denyAllForTCF()
+            case .ccpa:
+                denyAllForCCPA()
+            default:
+                denyAllForGDPR()
         }
-
-        if (isCCPA) {
-            denyAllForCCPA()
-            return
-        }
-
-        denyAllForGDPR()
     }
 
     @IBAction func didTapSaveServices(_ sender: Any) {
-        if (isTCF) {
-            updateServicesForTCF()
-            return
+        switch activeVariant {
+            case .tcf:
+                updateServicesForTCF()
+            case .ccpa:
+                print("NO ACTION FOR CCPA")
+            default:
+                updateServicesForGDPR()
         }
-
-        if (isCCPA) {
-            print("NO ACTION FOR CCPA")
-            return
-        }
-
-        updateServicesForGDPR()
     }
 
     @IBAction func didTapChangeLanguage(_ sender: Any) {
@@ -244,13 +230,15 @@ extension BuildYourOwnUIViewController {
     }
     
     private func showCurrentLegalFramework() {
-        var legalFramework: String
-        if (isTCF) {
-          legalFramework = "TCF 2.0"
-        } else if (isCCPA) {
-            legalFramework = "CCPA"
-        } else {
-            legalFramework = "GDPR"
+        let legalFramework: String
+
+        switch activeVariant {
+            case .tcf:
+                legalFramework = "TCF 2.0"
+            case .ccpa:
+                legalFramework = "CCPA"
+            default:
+                legalFramework = "GDPR"
         }
 
         currentLegalFrameworkLabel.text = legalFramework
