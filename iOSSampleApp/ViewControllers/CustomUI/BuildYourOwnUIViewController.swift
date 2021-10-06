@@ -61,20 +61,20 @@ extension BuildYourOwnUIViewController {
     }
 
     private func acceptAllForGDPR() {
-        UsercentricsCore.shared.acceptAllServices(consentType: .explicit_)
+        UsercentricsCore.shared.acceptAll(consentType: .explicit_)
 
         applyConsent()
     }
 
     private func denyAllForGDPR() {
-        UsercentricsCore.shared.denyAllServices(consentType: .explicit_)
+        UsercentricsCore.shared.denyAll(consentType: .explicit_)
 
         applyConsent()
     }
 
     private func updateServicesForGDPR() {
         let decisions: [UserDecision] = []
-        UsercentricsCore.shared.updateServices(decisions: decisions, consentType: .explicit_)
+        UsercentricsCore.shared.saveDecisions(decisions: decisions, consentType: .explicit_)
 
         applyConsent()
     }
@@ -151,13 +151,13 @@ extension BuildYourOwnUIViewController {
     }
 
     private func acceptAllForTCF() {
-        UsercentricsCore.shared.acceptAllForTCF(fromLayer: .firstLayer)
+        UsercentricsCore.shared.acceptAllForTCF(fromLayer: .firstLayer, consentType: .explicit_)
 
         applyConsent()
     }
 
     private func denyAllForTCF() {
-        UsercentricsCore.shared.denyAllForTCF(fromLayer: .firstLayer)
+        UsercentricsCore.shared.denyAllForTCF(fromLayer: .firstLayer, consentType: .explicit_)
 
         applyConsent()
     }
@@ -166,8 +166,7 @@ extension BuildYourOwnUIViewController {
         let decisions: [UserDecision] = []
         let tcfDecisions = TCFUserDecisions(purposes: [], specialFeatures: [], vendors: [])
 
-        UsercentricsCore.shared.updateChoicesForTCF(decisions: tcfDecisions, fromLayer: .firstLayer)
-
+        UsercentricsCore.shared.saveDecisionsForTCF(tcfDecisions: tcfDecisions, fromLayer: .firstLayer, serviceDecisions: decisions, consentType: .explicit_)
         applyConsent()
     }
 
