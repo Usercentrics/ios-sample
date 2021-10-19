@@ -29,6 +29,6 @@ We recommend you to interact with all buttons displayed, check your Console and 
 Learn more
 ------------
 
-- For a full overview of our SDK, plese see our dedicated [documentation](https://docs.usercentrics.com/cmp_in_app_sdk/latest/).
+- For a full overview of our SDK, please see our dedicated [documentation](https://docs.usercentrics.com/cmp_in_app_sdk/latest/).
 - For more information and products, check out our [website](https://usercentrics.com).
 
