@@ -16,7 +16,20 @@ Result
 
 After running the app you should see a screen like this:
 
-<img src="main.png" height="534" width="247"/>
+<img src="screenshots/main.png" height="534" width="247"/>
+
+Customization Examples
+------------
+
+These examples will help you understand how the customization API works.
+
+- [Example 1](https://github.com/Usercentrics/ios-sample/tree/main/iOSSampleApp/ViewControllers/Main/FirstLayerCustomizations.swift):
+  
+<img src="screenshots/customization1.png" height="500" width="270"/>
+  
+- [Example 2](https://github.com/Usercentrics/ios-sample/tree/main/iOSSampleApp/ViewControllers/Main/FirstLayerCustomizations.swift):
+  
+<img src="screenshots/customization2.png" height="500" width="270"/>
 
 Custom UI
 ------------
@@ -24,7 +37,7 @@ Custom UI
 This screen will help you understand how you can [build your own CMP](https://docs.usercentrics.com/cmp_in_app_sdk/latest/collect_consent/build_own_cmp/).
 We recommend you to interact with all buttons displayed, check your Console and don't forget to see the code behind.
 
-<img src="custom_ui.png" height="534" width="247"/>
+<img src="screenshots/custom_ui.png" height="534" width="247"/>
 
 Learn more
 ------------

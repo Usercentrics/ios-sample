@@ -5,7 +5,10 @@ import AppTrackingTransparency
 
 class UsercentricsUIViewController: UIViewController {
 
-    @IBOutlet weak var showUsercentricsButton: UIButton!
+    @IBOutlet weak var showFirstLayerButton: UIButton!
+    @IBOutlet weak var showSecondLayerButton: UIButton!
+    @IBOutlet weak var customizationExampleOneButton: UIButton!
+    @IBOutlet weak var customizationExampleTwoButton: UIButton!
     @IBOutlet weak var showCustomUIButton: UIButton!
 
     override func viewDidLoad() {
@@ -23,7 +26,7 @@ class UsercentricsUIViewController: UIViewController {
             self.enableButtons()
 
             if status.shouldShowCMP {
-                self.presentUsercentricsUI(showCloseButton: false)
+                self.presentFirstLayer()
             } else {
                 self.applyConsent(with: status.consents)
             }
@@ -33,37 +36,55 @@ class UsercentricsUIViewController: UIViewController {
         }
     }
 
-    private func presentUsercentricsUI(showCloseButton: Bool) {
-        let settings = UsercentricsUISettings(customFont: nil,
-                                              customLogo: nil,
-                                              showCloseButton: showCloseButton)
+    private func presentFirstLayer(layout: UsercentricsLayout = .popup(position: .center),
+                                   firstLayerStyleSettings: FirstLayerStyleSettings? = nil) {
+        guard let navigationController = self.navigationController else { fatalError("Navigation Controller needed") }
 
-        let viewController: UIViewController
-        /// Get the UsercentricsUI and display it
-        viewController = UsercentricsUserInterface.getPredefinedUI(settings: settings) { [weak self] response in
+        // Launch Usercentrics Banner with your settings
+        let banner = UsercentricsBanner()
+        banner.showFirstLayer(hostView: navigationController,
+                              layout: layout,
+                              settings: firstLayerStyleSettings) { [weak self] response in
             guard let self = self else { return }
             /// Process consents
             self.applyConsent(with: response.consents)
-            self.navigationController?.dismiss(animated: true, completion: nil)
         }
-
-        viewController.isModalInPresentation = true
-        viewController.modalPresentationStyle = .overFullScreen
-
-        self.navigationController?.present(viewController, animated: true, completion: nil)
     }
-    
+
+    private func presentSecondLayer(presentationMode: SecondLayerPresentationMode = .present) {
+        guard let navigationController = self.navigationController else { fatalError("Navigation Controller needed") }
+
+        // This is useful when you need to call our CMP from settings screen for instance, therefore the user may dismiss the view
+        let banner = UsercentricsBanner()
+        banner.showSecondLayer(hostView: navigationController,
+                               presentationMode: presentationMode) { [weak self] response in
+            guard let self = self else { return }
+            /// Process consents
+            self.applyConsent(with: response.consents)
+        }
+    }
+
     private func applyConsent(with consents: [UsercentricsServiceConsent]) {
         /// https://docs.usercentrics.com/cmp_in_app_sdk/latest/apply_consent/apply-consent/#apply-consent-to-each-service
     }
-
 }
 
 extension UsercentricsUIViewController {
 
-    @IBAction func didTapShowUsercentricsUI(_ sender: Any) {
-        /// This is useful when you need to call our CMP from settings screen for instance, therefore the user may dismiss the view
-        presentUsercentricsUI(showCloseButton: true)
+    @IBAction func didTapShowFirstLayer(_ sender: Any) {
+        self.presentFirstLayer()
+    }
+
+    @IBAction func didTapShowSecondLayer(_ sender: Any) {
+        self.presentSecondLayer()
+    }
+
+    @IBAction func didTapShowCustomExampleOne(_ sender: Any) {
+        self.presentFirstLayer(layout: .popup(position: .bottom), firstLayerStyleSettings: firstLayerCustomizationOne())
+    }
+
+    @IBAction func didTapShowCustomExampleTwo(_ sender: Any) {
+        self.presentFirstLayer(layout: .full, firstLayerStyleSettings: firstLayerCustomizationTwo())
     }
 
     @IBAction func didTapCustomUIMethods(_ sender: Any) {
@@ -71,8 +92,9 @@ extension UsercentricsUIViewController {
     }
 
     private func enableButtons() {
-        self.showUsercentricsButton.isEnabled = true
-        self.showCustomUIButton.isEnabled = true
+        [showCustomUIButton, showFirstLayerButton, showSecondLayerButton, customizationExampleOneButton, customizationExampleTwoButton].forEach {
+            $0.isEnabled = true
+        }
     }
 
     private func setupUI() {
