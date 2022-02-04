@@ -23,11 +23,11 @@ Customization Examples
 
 These examples will help you understand how the customization API works.
 
-- [Example 1](https://github.com/Usercentrics/ios-sample/tree/main/iOSSampleApp/ViewControllers/Main/FirstLayerCustomizations.swift):
+- [Example 1](https://github.com/Usercentrics/ios-sample/tree/main/iOSSampleApp/ViewControllers/Main/FirstLayerCustomizations.swift#L5):
   
 <img src="screenshots/customization1.png" height="500" width="270"/>
   
-- [Example 2](https://github.com/Usercentrics/ios-sample/tree/main/iOSSampleApp/ViewControllers/Main/FirstLayerCustomizations.swift):
+- [Example 2](https://github.com/Usercentrics/ios-sample/tree/main/iOSSampleApp/ViewControllers/Main/FirstLayerCustomizations.swift#L36):
   
 <img src="screenshots/customization2.png" height="500" width="270"/>
 
