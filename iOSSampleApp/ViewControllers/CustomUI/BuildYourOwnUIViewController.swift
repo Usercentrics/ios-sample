@@ -132,20 +132,21 @@ extension BuildYourOwnUIViewController {
         print("Second layer title: \(tcf2.secondLayerTitle)")
         print("Second layer description: \(tcf2.secondLayerDescription ?? "")")
 
-        let tcfData = UsercentricsCore.shared.getTCFData()
-        print("tcfData", tcfData)
-        print("purposes", tcfData.purposes)
-        print("specialPurposes", tcfData.specialPurposes)
-        print("features", tcfData.features)
-        print("specialFeatures", tcfData.specialFeatures)
-        print("stacks", tcfData.stacks)
-        print("vendors", tcfData.vendors)
+        UsercentricsCore.shared.getTCFData { tcfData in
+            print("tcfData", tcfData)
+            print("purposes", tcfData.purposes)
+            print("specialPurposes", tcfData.specialPurposes)
+            print("features", tcfData.features)
+            print("specialFeatures", tcfData.specialFeatures)
+            print("stacks", tcfData.stacks)
+            print("vendors", tcfData.vendors)
 
-        print("Accept All button: \(tcf2.buttonsAcceptAllLabel)")
-        print("Deny button: \(tcf2.buttonsDenyAllLabel)")
-        print("Save button: \(tcf2.buttonsSaveLabel)")
+            print("Accept All button: \(tcf2.buttonsAcceptAllLabel)")
+            print("Deny button: \(tcf2.buttonsDenyAllLabel)")
+            print("Save button: \(tcf2.buttonsSaveLabel)")
 
-        print("TCString", UsercentricsCore.shared.getTCString())
+            print("TCString", tcfData.tcString)
+        }
     }
 
     private func acceptAllForTCF() {

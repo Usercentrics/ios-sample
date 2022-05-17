@@ -25,7 +25,7 @@ class UsercentricsUIViewController: UIViewController {
             guard let self = self else { return }
             self.enableButtons()
 
-            if status.shouldShowCMP {
+            if status.shouldCollectConsent {
                 self.presentFirstLayer()
             } else {
                 self.applyConsent(with: status.consents)
@@ -41,23 +41,20 @@ class UsercentricsUIViewController: UIViewController {
         guard let navigationController = self.navigationController else { fatalError("Navigation Controller needed") }
 
         // Launch Usercentrics Banner with your settings
-        let banner = UsercentricsBanner()
-        banner.showFirstLayer(hostView: navigationController,
-                              layout: layout,
-                              settings: firstLayerStyleSettings) { [weak self] response in
+        let banner = UsercentricsBanner(bannerSettings: BannerSettings(firstLayerSettings: firstLayerStyleSettings))
+        banner.showFirstLayer(hostView: navigationController, layout: layout) { [weak self] response in
             guard let self = self else { return }
             /// Process consents
             self.applyConsent(with: response.consents)
         }
     }
 
-    private func presentSecondLayer(presentationMode: SecondLayerPresentationMode = .present) {
+    private func presentSecondLayer() {
         guard let navigationController = self.navigationController else { fatalError("Navigation Controller needed") }
 
         // This is useful when you need to call our CMP from settings screen for instance, therefore the user may dismiss the view
-        let banner = UsercentricsBanner()
-        banner.showSecondLayer(hostView: navigationController,
-                               presentationMode: presentationMode) { [weak self] response in
+        let banner = UsercentricsBanner(bannerSettings: BannerSettings(secondLayerSettings: SecondLayerStyleSettings(showCloseButton: true)))
+        banner.showSecondLayer(hostView: navigationController) { [weak self] response in
             guard let self = self else { return }
             /// Process consents
             self.applyConsent(with: response.consents)
