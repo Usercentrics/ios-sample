@@ -44,12 +44,11 @@ extension BuildYourOwnUIViewController {
         let settings = data.settings
 
         print("Title: \(settings.labels.firstLayerTitle)")
-        print("Description: \(settings.bannerMessage ?? "")")
+        print("Description: \(settings.firstLayerDescription.string)")
 
         let services = data.services
         let categories = data.categories
 
-        print("data.settings", settings)
         print("data.services", services)
         print("data.categories", categories)
 

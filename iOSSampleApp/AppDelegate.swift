@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  iOSSampleApp
-//
-//  Created by Pedro Araujo on 13/09/2021.
-//
-
 import UIKit
 import Usercentrics
 import UsercentricsUI
