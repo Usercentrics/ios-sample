@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A2A0C02927AD27FC00C061D9 /* FirstLayerCustomizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A0C02827AD27FC00C061D9 /* FirstLayerCustomizations.swift */; };
+		A2A0C02927AD27FC00C061D9 /* CustomizationExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A0C02827AD27FC00C061D9 /* CustomizationExamples.swift */; };
 		A2B7BF8C26EF80C200B151B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B7BF8B26EF80C200B151B7 /* AppDelegate.swift */; };
 		A2B7BF9026EF80C200B151B7 /* UsercentricsUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B7BF8F26EF80C200B151B7 /* UsercentricsUIViewController.swift */; };
 		A2B7BF9526EF80C300B151B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2B7BF9426EF80C300B151B7 /* Assets.xcassets */; };
@@ -50,7 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A2A0C02827AD27FC00C061D9 /* FirstLayerCustomizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLayerCustomizations.swift; sourceTree = "<group>"; };
+		A2A0C02827AD27FC00C061D9 /* CustomizationExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizationExamples.swift; sourceTree = "<group>"; };
 		A2B7BF8826EF80C200B151B7 /* iOSSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B7BF8B26EF80C200B151B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2B7BF8F26EF80C200B151B7 /* UsercentricsUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsercentricsUIViewController.swift; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 			children = (
 				A2B7BF8F26EF80C200B151B7 /* UsercentricsUIViewController.swift */,
 				A2B7BFBD26EF82BD00B151B7 /* UsercentricsUIViewController.xib */,
-				A2A0C02827AD27FC00C061D9 /* FirstLayerCustomizations.swift */,
+				A2A0C02827AD27FC00C061D9 /* CustomizationExamples.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -299,7 +299,7 @@
 			files = (
 				A2B7BF9026EF80C200B151B7 /* UsercentricsUIViewController.swift in Sources */,
 				A2B7BF8C26EF80C200B151B7 /* AppDelegate.swift in Sources */,
-				A2A0C02927AD27FC00C061D9 /* FirstLayerCustomizations.swift in Sources */,
+				A2A0C02927AD27FC00C061D9 /* CustomizationExamples.swift in Sources */,
 				A2B7BFD126EFA0E400B151B7 /* BuildYourOwnUIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
