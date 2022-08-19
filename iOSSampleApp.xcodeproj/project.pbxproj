@@ -632,7 +632,7 @@
 			repositoryURL = "https://bitbucket.org/usercentricscode/usercentrics-spm-sdk";
 			requirement = {
 				kind = exactVersion;
-				version = 2.6.0;
+				version = 2.7.1;
 			};
 		};
 		B3FD36AA2832991F0010ED3E /* XCRemoteSwiftPackageReference "usercentrics-spm-ui" */ = {
@@ -640,7 +640,7 @@
 			repositoryURL = "https://bitbucket.org/usercentricscode/usercentrics-spm-ui";
 			requirement = {
 				kind = exactVersion;
-				version = 2.6.0;
+				version = 2.7.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

@@ -37,11 +37,11 @@ class UsercentricsUIViewController: UIViewController {
     }
 
     private func presentFirstLayer(layout: UsercentricsLayout = .popup(position: .center),
-                                   firstLayerStyleSettings: FirstLayerStyleSettings? = nil) {
+                                   bannerSettings: BannerSettings? = nil) {
         guard let navigationController = self.navigationController else { fatalError("Navigation Controller needed") }
 
         // Launch Usercentrics Banner with your settings
-        let banner = UsercentricsBanner(bannerSettings: BannerSettings(firstLayerSettings: firstLayerStyleSettings))
+        let banner = UsercentricsBanner(bannerSettings: bannerSettings)
         banner.showFirstLayer(hostView: navigationController, layout: layout) { [weak self] response in
             guard let self = self else { return }
             /// Process consents
@@ -53,7 +53,7 @@ class UsercentricsUIViewController: UIViewController {
         guard let navigationController = self.navigationController else { fatalError("Navigation Controller needed") }
 
         // This is useful when you need to call our CMP from settings screen for instance, therefore the user may dismiss the view
-        let banner = UsercentricsBanner(bannerSettings: BannerSettings(secondLayerSettings: SecondLayerStyleSettings(showCloseButton: true)))
+        let banner = UsercentricsBanner(bannerSettings: BannerSettings(secondLayerStyleSettings: SecondLayerStyleSettings(showCloseButton: true)))
         banner.showSecondLayer(hostView: navigationController) { [weak self] response in
             guard let self = self else { return }
             /// Process consents
@@ -77,11 +77,11 @@ extension UsercentricsUIViewController {
     }
 
     @IBAction func didTapShowCustomExampleOne(_ sender: Any) {
-        self.presentFirstLayer(layout: .popup(position: .bottom), firstLayerStyleSettings: firstLayerCustomizationOne())
+        self.presentFirstLayer(layout: .popup(position: .bottom), bannerSettings: customizationExample1())
     }
 
     @IBAction func didTapShowCustomExampleTwo(_ sender: Any) {
-        self.presentFirstLayer(layout: .full, firstLayerStyleSettings: firstLayerCustomizationTwo())
+        self.presentFirstLayer(layout: .full, bannerSettings: customizationExample2())
     }
 
     @IBAction func didTapCustomUIMethods(_ sender: Any) {
