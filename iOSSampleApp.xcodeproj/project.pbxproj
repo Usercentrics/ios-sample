@@ -15,7 +15,6 @@
 		A2B7BFBE26EF82BD00B151B7 /* UsercentricsUIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2B7BFBD26EF82BD00B151B7 /* UsercentricsUIViewController.xib */; };
 		A2B7BFCF26EF9FB500B151B7 /* BuildYourOwnUIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2B7BFCE26EF9FB500B151B7 /* BuildYourOwnUIViewController.xib */; };
 		A2B7BFD126EFA0E400B151B7 /* BuildYourOwnUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B7BFD026EFA0E400B151B7 /* BuildYourOwnUIViewController.swift */; };
-		B3FD36A9283298F20010ED3E /* Usercentrics in Frameworks */ = {isa = PBXBuildFile; productRef = B3FD36A8283298F20010ED3E /* Usercentrics */; };
 		B3FD36AC2832991F0010ED3E /* UsercentricsUI in Frameworks */ = {isa = PBXBuildFile; productRef = B3FD36AB2832991F0010ED3E /* UsercentricsUI */; };
 /* End PBXBuildFile section */
 
@@ -70,7 +69,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3FD36AC2832991F0010ED3E /* UsercentricsUI in Frameworks */,
-				B3FD36A9283298F20010ED3E /* Usercentrics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +173,6 @@
 			);
 			name = iOSSampleApp;
 			packageProductDependencies = (
-				B3FD36A8283298F20010ED3E /* Usercentrics */,
 				B3FD36AB2832991F0010ED3E /* UsercentricsUI */,
 			);
 			productName = iOSSampleApp;
@@ -250,7 +247,6 @@
 			);
 			mainGroup = A2B7BF7F26EF80C200B151B7;
 			packageReferences = (
-				B3FD36A7283298F20010ED3E /* XCRemoteSwiftPackageReference "usercentrics-spm-sdk" */,
 				B3FD36AA2832991F0010ED3E /* XCRemoteSwiftPackageReference "usercentrics-spm-ui" */,
 			);
 			productRefGroup = A2B7BF8926EF80C200B151B7 /* Products */;
@@ -627,30 +623,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B3FD36A7283298F20010ED3E /* XCRemoteSwiftPackageReference "usercentrics-spm-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://bitbucket.org/usercentricscode/usercentrics-spm-sdk";
-			requirement = {
-				kind = exactVersion;
-				version = 2.9.0;
-			};
-		};
 		B3FD36AA2832991F0010ED3E /* XCRemoteSwiftPackageReference "usercentrics-spm-ui" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://bitbucket.org/usercentricscode/usercentrics-spm-ui";
 			requirement = {
 				kind = exactVersion;
-				version = 2.9.0;
+				version = 2.11.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B3FD36A8283298F20010ED3E /* Usercentrics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B3FD36A7283298F20010ED3E /* XCRemoteSwiftPackageReference "usercentrics-spm-sdk" */;
-			productName = Usercentrics;
-		};
 		B3FD36AB2832991F0010ED3E /* UsercentricsUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B3FD36AA2832991F0010ED3E /* XCRemoteSwiftPackageReference "usercentrics-spm-ui" */;

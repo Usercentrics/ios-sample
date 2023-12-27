@@ -162,7 +162,7 @@ extension BuildYourOwnUIViewController {
 
     private func updateServicesForTCF() {
         let decisions: [UserDecision] = []
-        let tcfDecisions = TCFUserDecisions(purposes: [], specialFeatures: [], vendors: [])
+        let tcfDecisions = TCFUserDecisions(purposes: [], specialFeatures: [], vendors: [], adTechProviders: [])
 
         UsercentricsCore.shared.saveDecisionsForTCF(tcfDecisions: tcfDecisions, fromLayer: .firstLayer, serviceDecisions: decisions, consentType: .explicit_)
         applyConsent()
