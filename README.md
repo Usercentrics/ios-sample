@@ -2,6 +2,10 @@
 
 The goal of this repository is to show how to use Usercentrics SDK inside of an iOS application.
 
+# Already a customer?
+
+In case you wish to report an issue, we provide a [dedicated page](https://usercentricssupport.zendesk.com/hc/en-us/requests/new) specifically for this purpose. By accessing the provided link and submitting a ticket our team will address your concerns with the utmost efficiency, ensuring a prompt resolution.
+
 Instructions
 ------------
 
