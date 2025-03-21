@@ -10,7 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         /// Initialize Usercentrics with your configuration
-        let options = UsercentricsOptions(settingsId: "Yi9N3aXia")
+        let options = UsercentricsOptions(settingsId: "lQ_Dio7QL")
         options.loggerLevel = .debug
         UsercentricsCore.configure(options: options)
 

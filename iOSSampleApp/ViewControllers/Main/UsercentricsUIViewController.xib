@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,63 +11,109 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UsercentricsUIViewController" customModule="iOSSampleApp" customModuleProvider="target">
             <connections>
-                <outlet property="customizationExampleOneButton" destination="0Je-si-L6P" id="YYK-6i-HwK"/>
-                <outlet property="customizationExampleTwoButton" destination="6TN-jf-s6G" id="Lcr-hI-2bD"/>
-                <outlet property="showCustomUIButton" destination="x0b-FC-Ewz" id="gqg-1A-GCE"/>
-                <outlet property="showFirstLayerButton" destination="W1P-xk-ldk" id="pY0-Wc-Vqw"/>
-                <outlet property="showSecondLayerButton" destination="Snd-p3-NID" id="exR-hh-1xi"/>
+                <outlet property="showFirstLayerCCPA" destination="x0b-FC-Ewz" id="gqg-1A-GCE"/>
+                <outlet property="showFirstLayerGDPR" destination="W1P-xk-ldk" id="pY0-Wc-Vqw"/>
+                <outlet property="showFirstLayerTCF" destination="0Je-si-L6P" id="YYK-6i-HwK"/>
+                <outlet property="showSecondLayerCCPA" destination="W04-fr-fqV" id="UGX-4K-lgl"/>
+                <outlet property="showSecondLayerGDPR" destination="Snd-p3-NID" id="exR-hh-1xi"/>
+                <outlet property="showSecondLayerTCF" destination="6TN-jf-s6G" id="Lcr-hI-2bD"/>
                 <outlet property="view" destination="iN0-l3-epB" id="CBK-G2-kr5"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="QKM-Gp-XCK">
-                    <rect key="frame" x="16" y="338" width="382" height="274"/>
+                    <rect key="frame" x="16" y="357" width="408" height="314"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1P-xk-ldk">
-                            <rect key="frame" x="102" y="0.0" width="178" height="42"/>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                            <state key="normal" title="Show First Layer"/>
+                            <rect key="frame" x="20" y="0.0" width="368" height="39"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                            <state key="normal" title="Show First Layer - GDPR">
+                                <color key="titleColor" systemColor="systemBackgroundColor"/>
+                            </state>
                             <connections>
-                                <action selector="didTapShowFirstLayer:" destination="-1" eventType="touchUpInside" id="cIj-dP-qY4"/>
+                                <action selector="didTapShowFirstLayerGDPR:" destination="-1" eventType="touchUpInside" id="cIj-dP-qY4"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Snd-p3-NID">
-                            <rect key="frame" x="84" y="58" width="214" height="42"/>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                            <state key="normal" title="Show Second Layer"/>
+                            <rect key="frame" x="20" y="55" width="368" height="39"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                            <state key="normal" title="Show Second Layer - GDPR">
+                                <color key="titleColor" systemColor="systemBackgroundColor"/>
+                            </state>
                             <connections>
-                                <action selector="didTapShowSecondLayer:" destination="-1" eventType="touchUpInside" id="bAZ-To-nBd"/>
+                                <action selector="didTapShowSecondLayerGDPR:" destination="-1" eventType="touchUpInside" id="bAZ-To-nBd"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Je-si-L6P">
-                            <rect key="frame" x="56" y="116" width="270" height="42"/>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                            <state key="normal" title="Customization Example 1"/>
+                            <rect key="frame" x="20" y="110" width="368" height="39"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                            <state key="normal" title="Show First Layer - TCF">
+                                <color key="titleColor" systemColor="systemBackgroundColor"/>
+                            </state>
                             <connections>
-                                <action selector="didTapShowCustomExampleOne:" destination="-1" eventType="touchUpInside" id="wk8-m8-G4m"/>
+                                <action selector="didTapShowFirstLayerTCF:" destination="-1" eventType="touchUpInside" id="wk8-m8-G4m"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6TN-jf-s6G">
-                            <rect key="frame" x="54.5" y="174" width="273" height="42"/>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                            <state key="normal" title="Customization Example 2"/>
+                            <rect key="frame" x="20" y="165" width="368" height="39"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                            <state key="normal" title="Show Second Layer - TCF">
+                                <color key="titleColor" systemColor="systemBackgroundColor"/>
+                            </state>
                             <connections>
-                                <action selector="didTapShowCustomExampleTwo:" destination="-1" eventType="touchUpInside" id="hg8-f3-dJO"/>
+                                <action selector="didTapShowSecondLayerTCF:" destination="-1" eventType="touchUpInside" id="hg8-f3-dJO"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0b-FC-Ewz">
-                            <rect key="frame" x="134" y="232" width="114" height="42"/>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                            <state key="normal" title="Custom UI"/>
+                            <rect key="frame" x="20" y="220" width="368" height="39"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                            <state key="normal" title="Show First Layer - CCPA">
+                                <color key="titleColor" systemColor="systemBackgroundColor"/>
+                            </state>
                             <connections>
-                                <action selector="didTapCustomUIMethods:" destination="-1" eventType="touchUpInside" id="Op0-lb-XIi"/>
+                                <action selector="didTapShowFirstLayerCCPA:" destination="-1" eventType="touchUpInside" id="Op0-lb-XIi"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W04-fr-fqV">
+                            <rect key="frame" x="20" y="275" width="368" height="39"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                            <state key="normal" title="Show Second Layer - CCPA">
+                                <color key="titleColor" systemColor="systemBackgroundColor"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapShowSecondLayerCCPA:" destination="-1" eventType="touchUpInside" id="dhw-Wh-Wg7"/>
                             </connections>
                         </button>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="W1P-xk-ldk" secondAttribute="trailing" constant="20" id="11S-4f-IZf"/>
+                        <constraint firstItem="x0b-FC-Ewz" firstAttribute="leading" secondItem="QKM-Gp-XCK" secondAttribute="leading" constant="20" id="3u1-dw-rSR"/>
+                        <constraint firstAttribute="trailing" secondItem="6TN-jf-s6G" secondAttribute="trailing" constant="20" id="5Ax-fi-ug1"/>
+                        <constraint firstItem="W1P-xk-ldk" firstAttribute="leading" secondItem="QKM-Gp-XCK" secondAttribute="leading" constant="20" id="7nJ-e0-OqC"/>
+                        <constraint firstItem="Snd-p3-NID" firstAttribute="leading" secondItem="QKM-Gp-XCK" secondAttribute="leading" constant="20" id="9Mt-By-Oj7"/>
+                        <constraint firstItem="W04-fr-fqV" firstAttribute="leading" secondItem="QKM-Gp-XCK" secondAttribute="leading" constant="20" id="Bnv-ke-HIe"/>
+                        <constraint firstItem="W04-fr-fqV" firstAttribute="top" secondItem="x0b-FC-Ewz" secondAttribute="bottom" constant="16" id="H7B-5S-cML"/>
+                        <constraint firstItem="0Je-si-L6P" firstAttribute="top" secondItem="Snd-p3-NID" secondAttribute="bottom" constant="16" id="HZi-ov-4vy"/>
+                        <constraint firstAttribute="trailing" secondItem="x0b-FC-Ewz" secondAttribute="trailing" constant="20" id="M5v-G1-A6U"/>
+                        <constraint firstItem="0Je-si-L6P" firstAttribute="leading" secondItem="QKM-Gp-XCK" secondAttribute="leading" constant="20" id="MVy-V9-FIB"/>
+                        <constraint firstAttribute="trailing" secondItem="0Je-si-L6P" secondAttribute="trailing" constant="20" id="PCS-TM-LCL"/>
+                        <constraint firstItem="6TN-jf-s6G" firstAttribute="leading" secondItem="QKM-Gp-XCK" secondAttribute="leading" constant="20" id="Q67-yx-ZO6"/>
+                        <constraint firstItem="6TN-jf-s6G" firstAttribute="top" secondItem="0Je-si-L6P" secondAttribute="bottom" constant="16" id="TSO-l8-0Cy"/>
+                        <constraint firstAttribute="trailing" secondItem="W04-fr-fqV" secondAttribute="trailing" constant="20" id="Xph-Nu-6Sg"/>
+                        <constraint firstItem="Snd-p3-NID" firstAttribute="top" secondItem="W1P-xk-ldk" secondAttribute="bottom" constant="16" id="gtO-8J-OJh"/>
+                        <constraint firstAttribute="trailing" secondItem="Snd-p3-NID" secondAttribute="trailing" constant="20" id="sBZ-0I-Idc"/>
+                        <constraint firstItem="x0b-FC-Ewz" firstAttribute="top" secondItem="6TN-jf-s6G" secondAttribute="bottom" constant="16" id="vPQ-83-94a"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -84,6 +130,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
