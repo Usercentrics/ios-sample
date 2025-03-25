@@ -628,7 +628,7 @@
 			repositoryURL = "https://bitbucket.org/usercentricscode/usercentrics-spm-ui";
 			requirement = {
 				kind = exactVersion;
-				version = 2.15.2;
+				version = 2.19.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
