@@ -12,9 +12,9 @@ class UsercentricsUIViewController: UIViewController {
     @IBOutlet weak var showFirstLayerCCPA: UIButton!
     @IBOutlet weak var showSecondLayerCCPA: UIButton!
     
-    private let gdprSettingsId = "lQ_Dio7QL"
-    private let tcfSettingsId = "EA4jnNPb9"
-    private let ccpaSettingsId = "NfThHXzzZNc-RE"
+    private let gdprSettingsId = "yNGSHskJOVSWXR"
+    private let tcfSettingsId = "eSe0in4dcRZvg9"
+    private let ccpaSettingsId = "46O8pGZIBzXs5d"
 
     override func viewDidLoad() {
         super.viewDidLoad()

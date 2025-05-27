@@ -627,8 +627,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://bitbucket.org/usercentricscode/usercentrics-spm-ui";
 			requirement = {
-				kind = exactVersion;
-				version = 2.19.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.20.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
